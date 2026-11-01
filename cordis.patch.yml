@@ -1,0 +1,10 @@
+# dsh-rea bundle patch: mount the REA bridge tools into the profile tree.
+#
+# The plugin registers three model-facing tools (rea_list, rea_cli, rea_tool)
+# that reach the real REA engines: the `rea` CLI surface plus a lazily started
+# `rea mcp` server for stateful analysis sessions. Schemas are fetched on demand
+# instead of pinned into every request, unlike a direct MCP mount of REA's 170
+# tool schemas (~490k tokens).
+- insert:
+    - id: dsh-rea
+      name: 'dsh-rea'

@@ -1,0 +1,23 @@
+{
+  "name": "dsh-rea",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "REA (Reverse Engineer Anything) bridge for the DeepSeek Harness: discover and invoke the full `rea` capability surface from inside a session.",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "dependencies": {},
+  "peerDependencies": {
+    "@deepseek-ai/dsh-tools": "0.2.1-rc.5",
+    "@deepseek-ai/schemastery": "3.18.5"
+  },
+  "license": "MIT"
+}

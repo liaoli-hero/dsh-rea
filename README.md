@@ -21,3 +21,9 @@ dsh plugin --profile <profile> add github:liaoli-hero/dsh-rea
 `rea_list` 发现能力，`rea_cli` 运行 REA 命令，`rea_tool` 按需调用 REA MCP 工具。可用功能取决于本机的 REA 版本、依赖及目标环境；部分操作会修改目标设备或文件，请先查看具体工具的作用。本仓库仅提供桥接，实际安装和跨平台兼容性尚未完成独立验收。
 
 `package.json` 标注 MIT；REA 自身的许可与使用条件请以其上游项目为准。
+
+## 隔离测试演示
+
+下图整理自一次隔离测试：桥接代码注册三个工具，并通过本机 REA 查询命令目录；它不是 DSH 桌面界面截图。
+
+![隔离测试结果](docs/demo.png)
